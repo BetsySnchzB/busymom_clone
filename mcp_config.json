@@ -1,20 +1,72 @@
 {
-  "servers": {
-    "context7": {
-      "name": "Context7",
-      "description": "Up-to-date code documentation for any prompt",
-      "type": "context7",
-      "version": "1.0.0",
-      "config": {
-        "apiEndpoint": "https://context7.upstash.io",
-        "apiKey": "${CONTEXT7_API_KEY}",
-        "model": "code-llama-34b-instruct",
-        "temperature": 0.7,
-        "maxTokens": 4096,
-        "promptStyle": "verbose",
-        "cacheEnabled": true,
-        "cacheTTL": 3600
+    "registry": "https://registry.firecrawl.dev/",
+    "plugins": {},
+    "mcpServers": {
+      "pinecone-mcp-server": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@pinecone-database/mcp"
+        ],
+        "env": {
+          "PINECONE_API_KEY": "pcsk_ejWHB_34MCcnbLUe4xAcAExrVvnicb4Y4y2Mr6raaUUdoGo14DSLny1581rUCpupBod"
+        }
+      },
+      "supabase-mcp-server": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@supabase/mcp-server-supabase@latest",
+          "--access-token",
+          "eyJhbGcOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJ1ZiOiInZrbW9jemVmbmt4a2F0Z3hrcGF0J"
+        ],
+        "env": {}
+      },
+      "firecrawl": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "firecrawl-mcp"
+        ],
+        "env": {
+          "FIRECRAWL_API_KEY": "fc-d5046a6cdbf847a6829a44349763f628"
+        }
+      },
+      "netlify": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@netlify/mcp"
+        ],
+        "env": {
+          "NETLIFY_PERSONAL_ACCESS_TOKEN": "nfp_XQnHVLKVrgnWwrwir57mGqhRKnXUB71bc82b"
+        }
+      },
+      "nextjs": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "create-next-app@latest",
+          "nextjs-app"
+        ],
+        "env": {}
+      },
+      "context7": {
+  "command": "npx",
+  "args": [
+    "-y",
+    "context7-mcp"
+  ],
+  "env": {}
+},
+"figma": {
+  "command": "npx",
+  "args": [
+    "-y",
+    "figma-mcp"
+  ],
+  "env": {}
       }
     }
   }
-}
+  
