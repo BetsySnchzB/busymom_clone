@@ -1,0 +1,20 @@
+{
+  "servers": {
+    "context7": {
+      "name": "Context7",
+      "description": "Up-to-date code documentation for any prompt",
+      "type": "context7",
+      "version": "1.0.0",
+      "config": {
+        "apiEndpoint": "https://context7.upstash.io",
+        "apiKey": "${CONTEXT7_API_KEY}",
+        "model": "code-llama-34b-instruct",
+        "temperature": 0.7,
+        "maxTokens": 4096,
+        "promptStyle": "verbose",
+        "cacheEnabled": true,
+        "cacheTTL": 3600
+      }
+    }
+  }
+}
