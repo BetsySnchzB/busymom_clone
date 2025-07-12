@@ -1,4 +1,9 @@
-node_modules
+# Build and cache folders to ignore
+.next/
+.turbo/
+.cache/
+out/
+node_modules/
 
 # Environment variables
 .env
@@ -35,3 +40,4 @@ Thumbs.db
 # Local Netlify folder
 .netlify
 .netlify/
+
