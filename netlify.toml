@@ -12,6 +12,11 @@
   status = 200
 
 [[redirects]]
+  from = "/api/v2/*"
+  to   = "/.netlify/functions/v2/:splat"
+  status = 200
+  
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
@@ -50,9 +55,7 @@
   # Same environment variables as production
 
 [dev]
-  command = "npm run dev"
-  port = 5173
-  targetPort = 5173
-  publish = "dist"
-  framework = "#custom"
+  command       = "npm run dev"
+  targetPort    = 3000
   functionsPort = 8888
+  publish       = "dist"
